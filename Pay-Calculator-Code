@@ -1,0 +1,25 @@
+//This program will calu your work hours and give you a %5 bonus if you work more then 20 hours
+
+var hours = prompt("How many hours did you work this week?");
+var pay = prompt("How much do you make an hour?");
+var bonus = .05;
+var calPay = hours * pay;
+
+//If you worked longer the 20 hours this code will run
+if (hours > 20) {
+  var calBonus = calPay * bonus;
+  calBonus = calBonus.toFixed(2);
+  var finalPay = Number(calBonus) + Number(calPay);
+  console.log("Since you worked more then 20 hours, you get a %5 bonus.")
+  console.log("Hours worked: " + hours);
+  console.log("Your pay an hour is: $" + pay)
+  console.log("You get a %5 bonus of " + calBonus);
+  console.log("Your total pay will be $" + finalPay);
+}
+
+//If you didn't work more then 20 hours this code will run
+if (hours < 20) {
+  console.log("Sorry you didn't work more then 20 hours and won't get a %5 bonus.")
+  console.log("Hours worked: " + hours);
+  console.log("Your pay an hour is: $" + pay)
+  console.log("Your total pay will be $" + calPay);
